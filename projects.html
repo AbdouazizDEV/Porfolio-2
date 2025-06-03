@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mes Projets - iPortfolio</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+      <link href="assets/css/projects.css" rel="stylesheet">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+    }
+    
+    .project-card {
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-text {
+      flex-grow: 1;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    .badge {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .card-title {
+        font-size: 1.2rem;
+      }
+      
+      .badge {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body class="projects-page">
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="https://res.cloudinary.com/dhivn2ahm/image/upload/v1739929505/WhatsApp_Image_2024-04-29_at_17.09.21_1_-removebg-preview_bvo4sq.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Abdou Aziz Diop</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="projects.html" class="active"><i class="bi bi-file-earmark-text navicon"></i> Projects</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="section bg-light py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2 class="text-dark" style="font-weight: bold; font-size: 3rem; color: #000; ">Mes Projets</h2>
+          <p>Découvrez quelques-unes de mes réalisations avec démonstrations vidéo et détails techniques.</p>
+        </div>
+        
+        <!-- <div class="filters-bar mb-4 d-flex flex-wrap justify-content-center gap-2" id="projects-filters">
+          <button class="btn btn-outline-dark filter-btn active" data-filter="all">Tous</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="web">Web</button>
+          <button class="btn btn-outline-success filter-btn" data-filter="mobile">Mobile</button>
+          <button class="btn btn-outline-info filter-btn" data-filter="api">API</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="autre">Autre</button>
+        </div> -->
+        
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="100">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://res.cloudinary.com/dhivn2ahm/video/upload/v1748950627/p0noeuzqquxy4lkkwkso.webm" title="Démo Projet Assemblée Nationale" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Plateforme Assemblée Nationale du Sénégal</h5>
+              <p class="card-text">Mise en place d'une plateforme dédiée aux députés et ministères pour l'assemblée nationale du Sénégal.</p>
+              <div class="tech-stack">
+                <span class="badge bg-primary">Laravel 11</span>
+                <span class="badge bg-danger">Angular 18</span>
+                <span class="badge bg-info text-dark">PostgreSQL</span>
+                <span class="badge bg-dark">GitLab</span>
+              </div> 
+              <a href="https://www.assemblee.sn/fr" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i> Voir le site</a>
+            </div>
+          </div>
+          <!-- Projet 2 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="120">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo Projet The Booker's" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">The Booker's - Réservation de tables</h5>
+              <p class="card-text">Application de gestion de réservation de table pour restaurants The Booker's.</p>
+              <div class="tech-stack">
+                <span class="badge bg-primary">Laravel</span>
+                <span class="badge bg-danger">Angular 18</span>
+                <span class="badge bg-info text-dark">Supabase</span>
+                <span class="badge bg-info text-dark">MySQL</span>
+                <span class="badge bg-dark">GitLab</span>
+                <span class="badge bg-secondary">LWS</span>
+              </div>
+              <a href="https://bo-thebookers.nianetechnologies.com/" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i> Voir le site</a>
+            </div>
+          </div>
+          <!-- Projet 3 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="140">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo Projet AlloDocteur" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">AlloDocteur - Gestion de rendez-vous hospitaliers</h5>
+              <p class="card-text">Application web permettant la prise de rendez-vous en ligne pour les hôpitaux, avec gestion des disponibilités, notifications et interface intuitive pour les patients et le personnel médical.</p>
+              <div class="tech-stack">
+                <span class="badge bg-primary">Laravel</span>
+                <span class="badge bg-success">Node.js</span>
+                <span class="badge bg-info text-dark">MySQL</span>
+                <span class="badge bg-dark">Cloudinary</span>
+              </div>
+              <a href="https://github.com/AbdouazizDEV/AlloDocteur" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-github"></i> Code source</a>
+            </div>
+          </div>
+          <!-- Projet 4 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="160">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo Projet SocialTailorApp" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">SocialTailorApp - Réseau social pour Teilleur</h5>
+              <p class="card-text">Application de réseau social pour Teilleur, facilitant la mise en relation et la gestion communautaire.</p>
+              <div class="tech-stack">
+                <span class="badge bg-success">Node.js</span>
+                <span class="badge bg-primary">React.js</span>
+                <span class="badge bg-info text-dark">Prisma</span>
+                <span class="badge bg-info text-dark">MongoDB</span>
+                <span class="badge bg-info text-dark">MySQL</span>
+                <span class="badge bg-dark">Cloudinary</span>
+              </div>
+              <a href="https://github.com/Bakemono-san/socialtailorapp-react" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-github"></i> Code source</a>
+            </div>
+          </div>
+          <!-- Projet 5 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="180">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo Projet Gestion Apprenants" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Application REST de gestion des apprenants</h5>
+              <p class="card-text">API REST pour la gestion des apprenants, documentation Swagger disponible.</p>
+              <div class="tech-stack">
+                <span class="badge bg-success">Node.js</span>
+                <span class="badge bg-info text-dark">Prisma</span>
+                <span class="badge bg-info text-dark">Firebase</span>
+                <span class="badge bg-info text-dark">MySQL</span>
+                <span class="badge bg-dark">Cloudinary</span>
+              </div>
+              <a href="https://laravelapprenant.onrender.com/Swagger/index.html" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i> Documentation</a>
+            </div>
+          </div>
+          <!-- Projet 6 -->
+          <div class="project-card card shadow-sm" data-aos="fade-up" data-aos-delay="200">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo Projet DetteLaravel" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">DetteLaravel - Gestion de dettes</h5>
+              <p class="card-text">Application de gestion de dettes, permettant le suivi et la gestion des créances.</p>
+              <div class="tech-stack">
+                <span class="badge bg-primary">Laravel</span>
+                <span class="badge bg-success">Node.js</span>
+                <span class="badge bg-info text-dark">Firebase</span>
+                <span class="badge bg-info text-dark">PostgreSQL</span>
+              </div>
+              <a href="https://github.com/AbdouazizDEV/DetteLaravel" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bi bi-github"></i> Code source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">KahfiCode</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="#">KahfiCode</a> Distributed by <a href="#">KahfiCode</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script>AOS.init();</script>
+  
+  <!-- Modale vidéo -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Démo vidéo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe id="modalVideoFrame" src="" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

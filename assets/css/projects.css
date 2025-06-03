@@ -1,0 +1,65 @@
+/* Barre de filtres */
+.filters-bar {
+  margin-bottom: 2rem;
+}
+.filter-btn.active, .filter-btn:focus {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+.filter-btn {
+  min-width: 90px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Grille de projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.project-card:hover {
+  transform: translateY(-7px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+.card-title {
+  font-weight: bold;
+  color: #222;
+}
+.tech-stack .badge {
+  font-size: 0.95rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.open-video-btn {
+  margin-bottom: 0.5rem;
+}
+/* Modale vidéo */
+#videoModal .modal-content {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#videoModal .modal-title {
+  font-weight: bold;
+  color: #222;
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .tech-stack .badge {
+    font-size: 0.85rem;
+  }
+} 
